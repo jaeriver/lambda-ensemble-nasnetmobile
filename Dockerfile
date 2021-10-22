@@ -7,14 +7,14 @@ RUN /var/lang/bin/python3.8 -m pip install --upgrade pip
 RUN yum install git -y
 
 # git clone
-RUN git clone https://github.com/manchann/lambda-ensemble-efficientnet.git
+RUN git clone https://github.com/manchann/lambda-ensemble-nasnetmobile.git
 
 # install packages
-RUN pip install -r lambda-ensemble-efficientnet/requirements.txt
+RUN pip install -r lambda-ensemble-nasnetmobile/requirements.txt
 
 # move lambdafunc.py
-RUN cp lambda-ensemble-efficientnet/lambda_function.py /var/task/
-RUN cp lambda-ensemble-efficientnet/imagenet_class_index.json /var/task/
+RUN cp lambda-ensemble-nasnetmobile/lambda_function.py /var/task/
+RUN cp lambda-ensemble-nasnetmobile/imagenet_class_index.json /var/task/
 
 
 CMD ["lambda_function.lambda_handler"]
