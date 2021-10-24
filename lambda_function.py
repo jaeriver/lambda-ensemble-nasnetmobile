@@ -25,7 +25,7 @@ def upload_s3(case_num, acc):
     item_dict = dict([(str(i), str(acc[i])) for i in range(len(acc))])
     s3_client.put_object(
         Body=json.dumps(item_dict),
-        Bucket=bucket_name,
+        Bucket=bucket_ensemble,
         Key=model_name + '_' + case_num + '.txt'
     )
     return True
