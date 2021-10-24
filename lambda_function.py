@@ -9,7 +9,7 @@ import time
 bucket_name = 'imagenet-sample'
 bucket_ensemble = 'lambda-ensemble'
 model_name = 'nasnetmobile'
-model_path = '/var/task/lambda-ensemble/model/' + model_name
+model_path = '/var/task/lambda-ensemble-nasnetmobile/model/' + model_name
 model = load_model(model_path, compile=True)
 
 s3 = boto3.resource('s3')
