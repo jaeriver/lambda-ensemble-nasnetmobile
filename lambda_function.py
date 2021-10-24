@@ -54,7 +54,7 @@ def filenames_to_input(file_list, batchsize):
     imgs = []
     for i in range(batchsize):
         img = read_image_from_s3(file_list[i])
-        img = img.resize((224, 224), Image.ANTIALIAS)
+        img = img.resize((240, 240), Image.ANTIALIAS)
         img = np.array(img)
 
         # batchsize, 224, 224, 3
